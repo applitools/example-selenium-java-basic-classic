@@ -1,6 +1,6 @@
 # Applitools Example: Selenium Java Basic with the Classic runner
 
-This is the example project for the [Selenium Java Basic tutorial](https://applitools.com/tutorials/selenium-java.html).
+This is the example project for the [Selenium Java Basic tutorial](https://applitools.com/tutorials/quickstart/web/selenium/java/basic).
 It shows how to start automating visual tests
 with [Applitools Eyes](https://applitools.com/platform/eyes/)
 using [Selenium WebDriver](https://www.selenium.dev/) in Java.
@@ -34,4 +34,4 @@ mvn exec:exec@run-the-tests -Dexec.classpathScope=test
 ```
 
 **For full instructions on running this project, take our
-[Selenium Java Basic tutorial](https://applitools.com/tutorials/selenium-java.html)!**
+[Selenium Java Basic tutorial](https://applitools.com/tutorials/quickstart/web/selenium/java/basic)!**
