@@ -25,7 +25,7 @@ To run this example project, you'll need:
 The main test case is [`AcmeBankTests.java`](src/test/java/com/applitools/example/AcmeBankTests.java).
 
 To execute tests, set the `APPLITOOLS_API_KEY` environment variable
-to your [account's API key](https://applitools.com/tutorials/getting-started/setting-up-your-environment.html).
+to your [account's API key](https://applitools.com/tutorials/guides/getting-started/registering-an-account).
 You can launch the test from your IDE,
 or you can run it from the command line with Maven like this:
 
