@@ -10,6 +10,7 @@ import com.applitools.eyes.selenium.fluent.Target;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
@@ -48,6 +49,11 @@ public class AcmeBankTests {
             // then the SDK will automatically read the `APPLITOOLS_API_KEY` environment variable to fetch it.
             config.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
 
+            // Read the headless mode setting from an environment variable.
+            // Use headless mode for Continuous Integration (CI) execution.
+            // Use headed mode for local development.
+            boolean headless = Boolean.parseBoolean(System.getenv().getOrDefault("HEADLESS", "false"));
+
             // Create a new batch for tests.
             // A batch is the collection of visual tests.
             // Batches are displayed in the dashboard, so use meaningful names.
@@ -59,7 +65,7 @@ public class AcmeBankTests {
             // Open the browser with the ChromeDriver instance.
             // Even though this test will run visual checkpoints on different browsers in the Ultrafast Grid,
             // it still needs to run the test one time locally to capture snapshots.
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(new ChromeOptions().setHeadless(headless));
 
             // Set an implicit wait of 10 seconds.
             // For larger projects, use explicit waits for better control.
